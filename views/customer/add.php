@@ -82,7 +82,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <th>No</th>
                             <th>Phone NO</th>
-                            <th>Name</th>
+                            <th>[rtl]الاسو[/rtl]</th>
                             <th>Service Cost</th>
                             <th>Task</th>
                             <th>Created AT</th>

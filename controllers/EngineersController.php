@@ -4,6 +4,9 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Engineers;
+use app\models\Customer;
+
+use app\models\Payment;
 use app\models\EngineersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -12,6 +15,7 @@ use yii\filters\VerbFilter;
 /**
  * EngineersController implements the CRUD actions for Engineers model.
  */
+
 class EngineersController extends Controller
 {
     public function behaviors()
@@ -25,6 +29,11 @@ class EngineersController extends Controller
             ],
         ];
     }
+
+ 
+   
+       
+            
 
     /**
      * Lists all Engineers models.
@@ -48,9 +57,53 @@ class EngineersController extends Controller
      */
     public function actionView($id)
     {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
+        $model = $this->findModel($id);
+        $pay = new Payment();
+        $r_amount = '' ;
+        $customer = $model->hasOne(Customer::className(), ['id' => 'customer_id']);
+            
+        
+         if ($pay->load(Yii::$app->request->post())){
+            $pay->attributes = $_POST['Payment'];
+            // $model->id = $_POST['Payment']['id'];
+            $pay->engineer_id = $model->id;
+            $pay->paid_amount = $_POST['Payment']['paid_amount'];
+
+            $query = (new \yii\db\Query())->from('payment')->where(['engineer_id' => $model->id]);
+            $sum = $query->sum('paid_amount');
+
+            
+            $pay->total_paid = $sum+$pay->paid_amount;
+
+            if($pay->total_paid <= $model->service_cost) {
+
+            $pay->save();
+             
+            }$all_payments = (new \yii\db\Query())
+                        ->select(['p.created_at', 'p.engineer_id', 'p.paid_amount', 'p.total_paid',  ]) 
+                        ->from('payment p')
+                        //->join('JOIN', 'p.engineer_id = e.engineer_id')
+                        ->where(['p.engineer_id' => $model->id])
+                        ->all();
+
+        
+                        $pay->paid_amount = '';
+            return $this->render('view', ['customer' => $customer, 'model' => $model, 'pay' =>$pay, 'all_payments' => $all_payments, 'r_amount' => $r_amount,]);
+
+         } else {
+
+            $all_payments = (new \yii\db\Query())
+                        ->select(['p.created_at', 'p.engineer_id', 'p.paid_amount', 'p.total_paid', ]) 
+                        ->from('payment p')
+                        //->join('JOIN', 'p.engineer_id = e.engineer_id')
+                        ->where(['p.engineer_id' => $model->id])
+                        ->all();
+
+            
+                return $this->render('view', [ 
+                    'customer' => $customer, 'model' => $model, 'pay' =>$pay, 'all_payments' => $all_payments, 'r_amount' => $r_amount,
+                ]);
+            }
     }
 
     /**
