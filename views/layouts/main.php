@@ -36,19 +36,19 @@ if (Yii::$app->controller->action->id === 'login') {
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body class="skin-blue sidebar-mini">
+    <body class="skin-blue sidebar-mini sidebar-collapse ">
     <?php $this->beginBody() ?>
     <div class="wrapper">
 
-        <?= $this->render(
+        <?php /*echo $this->render(
             'header.php',
             ['directoryAsset' => $directoryAsset]
-        ) ?>
+        ) */?>
 
-        <?= $this->render(
+        <?php /*echo $this->render(
             'left.php',
             ['directoryAsset' => $directoryAsset]
-        )
+        )*/
         ?>
 
         <?= $this->render(
@@ -57,6 +57,20 @@ if (Yii::$app->controller->action->id === 'login') {
         ) ?>
 
     </div>
+
+    <?php
+    yii\bootstrap\Modal::begin([
+        //'headerOptions' => ['id' => 'modalHeader'],
+        'id' => 'modal',
+        'size' => 'modal-xs',
+        //'options' => ['class'=>'fade'],
+        //keeps from closing modal with esc key or by clicking out of the modal.
+        // user must click cancel or X to close
+        //'clientOptions' => ['backdrop' => 'static', 'keyboard' => FALSE]
+    ]);
+    echo "<div id='modalContent'></div>";
+    yii\bootstrap\Modal::end();
+    ?>
 
     <?php $this->endBody() ?>
     </body>

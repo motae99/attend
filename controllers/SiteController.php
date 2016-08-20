@@ -8,6 +8,8 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\components\Attend;
+
 
 class SiteController extends Controller
 {
@@ -48,8 +50,13 @@ class SiteController extends Controller
     }
 
     public function actionIndex()
-    {
-        return $this->render('index');
+    {   
+        // $attend = new Attend();
+         $connection = 1;
+
+        return $this->render('index', [
+            'connection'=> $connection,
+        ]);
     }
 
     public function actionLogin()
