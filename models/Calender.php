@@ -13,7 +13,9 @@ use Yii;
  * @property string $date
  * @property string $start_time
  * @property string $end_time
+ * @property string $status
  *
+ * @property Attendance[] $attendances
  * @property Subjects $sub
  */
 class Calender extends \yii\db\ActiveRecord
@@ -32,10 +34,12 @@ class Calender extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['sub_id', 'day','date', 'start_time', 'end_time'], 'required'],
+            [['sub_id', 'day', 'date', 'start_time', 'end_time'], 'required'],
             [['sub_id'], 'integer'],
-            [['start_time', 'end_time'], 'safe'],
-            [['day'], 'string', 'max' => 45]
+            [['date', 'start_time', 'end_time'], 'safe'],
+            [['status'], 'string'],
+            [['day'], 'string', 'max' => 45],
+            [['sub_id'], 'exist', 'skipOnError' => true, 'targetClass' => Subjects::className(), 'targetAttribute' => ['sub_id' => 'id']],
         ];
     }
 
@@ -51,7 +55,16 @@ class Calender extends \yii\db\ActiveRecord
             'date' => 'Date',
             'start_time' => 'Start Time',
             'end_time' => 'End Time',
+            'status' => 'Status',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAttendances()
+    {
+        return $this->hasMany(Attendance::className(), ['time_table_id' => 'id']);
     }
 
     /**

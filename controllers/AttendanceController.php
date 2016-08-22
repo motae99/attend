@@ -77,16 +77,35 @@ class AttendanceController extends Controller
         $connection = $attend->connection();
         if($connection){
             $dis = $attend->disable();
-            $logs = $attend->getlogs();
-            var_dump($logs);
-            // foreach ($logs as $log) {
-            //     var_dump($log)."<br> <br> <br>";
+            // $logs = $attend->getlogs();
+            // var_dump($logs);
+            // $users = (new \yii\db\Query())
+            //         ->select('*')
+            //         ->from('users')
+            //         ->where(['id' => '1'])
+            //         ->all();
+             // var_dump($users);
+                    //'in', 'id', [1 ,2, 3, 4, 5, 6, 7, 8, 9, 10]
+                    //'between', 'id', 0 , 799
+            // foreach ($users as $user => $value) {
+            //     // echo $value['id']. " ".$value['uid']." ".$value['name']."<br>";
+            //     $pass = "";
+            //     $role = 0;
+            //     sleep(1);
+            //     $set = $attend->setUsers($value['id'], $value['uid'], $value['name'], $pass, $role);
 
             // }
-            $attend->enable();
-            $users = $attend->allUsers();
-            // var_dump($users);
 
+
+            // $clear = $attend->clearLogs();
+            $devUsers = $attend->allUsers();
+            // // var_dump($users);
+            // // $clearUsers = $attend->clearUsers();
+            foreach ($devUsers as $key => $v) {
+                echo $v[0]. " ".$v[1]." ".$v[2]." ".$v[3]."<br>";
+            }
+
+            $attend->enable();
             $cutConnection = $attend->disConnection();
         }
 

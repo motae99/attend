@@ -11,7 +11,7 @@ use Yii;
  * @property string $name
  * @property integer $sem_id
  * @property string $details
- *
+ * @property Attendance[] $attendances 
  * @property Semester $sem
  */
 class Student extends \yii\db\ActiveRecord
@@ -33,7 +33,8 @@ class Student extends \yii\db\ActiveRecord
             [['name', 'sem_id'], 'required'],
             [['sem_id'], 'integer'],
             [['details'], 'string'],
-            [['name'], 'string', 'max' => 45]
+            [['name'], 'string', 'max' => 45],
+            [['sem_id'], 'exist', 'skipOnError' => true, 'targetClass' => Semester::className(), 'targetAttribute' => ['sem_id' => 'id']],
         ];
     }
 
@@ -53,6 +54,15 @@ class Student extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+
+    public function getAttendances() 
+    { 
+       return $this->hasMany(Attendance::className(), ['stu_id' => 'id']); 
+    } 
+ 
+    /** 
+     * @return \yii\db\ActiveQuery 
+    */ 
     public function getSem()
     {
         return $this->hasOne(Semester::className(), ['id' => 'sem_id']);

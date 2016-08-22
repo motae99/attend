@@ -123,7 +123,7 @@ class Devices extends Object
         return $logs;
     }
 
-    function clearLogs(){
+    function clearLogs(){ 
      $cleared = clearattendance($this);
      return $cleared ;
         
@@ -146,8 +146,17 @@ class Devices extends Object
     	return $users;
     }
 
-    // getSizeUser($this)
+    function clearUsers(){
+        $cleared = clearuser($this);
+        return $cleared ;
+    }
+
+    function setUsers($uid, $userid, $name, $password, $role){
+        $set = setuser($this, $uid, $userid, $name, $password, $role);
+        return $set ;
+    }
     // setuser($this, $uid, $userid, $name, $password, $role)
+    // getSizeUser($this)
     // getuser($this)
     // clearuser($this)
     // clearadmin($this)

@@ -30181,3 +30181,772 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1471725154.238
     'REQUEST_TIME' => 1471725154
 ]
+2016-08-21 13:19:05 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Users' not found' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/views/attendance/report.php:41
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-21 13:19:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/report'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60290'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/report'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/report'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471774745.081
+    'REQUEST_TIME' => 1471774745
+]
+2016-08-21 13:19:42 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined method app\models\User::find()' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/views/attendance/report.php:41
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-21 13:19:42 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/report'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60291'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/report'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/report'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471774782.272
+    'REQUEST_TIME' => 1471774782
+]
+2016-08-21 13:21:19 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'attend.user' doesn't exist' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Command.php:837
+Stack trace:
+#0 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Command.php(837): PDOStatement->execute()
+#1 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/views/attendance/report.php(28): yii\db\Query->all()
+#4 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/View.php(325): require('/home/motae/lam...')
+#5 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[]')
+#6 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('<span class="st...', '[]', Object(app\controllers\AttendanceController))
+#7 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('<span class="st...', '[]', Object(app\controllers\AttendanceController))
+#8 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php(64): yii\base\Controller->render('<span class="st...')
+#9 [internal function]: app\controllers\AttendanceController->actionReport()
+#10 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#11 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#12 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#13 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#14 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'attend.user' doesn't exist
+The SQL being executed was: SELECT * FROM `user`' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/views/attendance/report.php(28): yii\db\Query->all()
+#4 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/View.php(325): require('/home/motae/lam...')
+#5 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[]')
+#6 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('<span class="st...', '[]', Object(app\controllers\AttendanceController))
+#7 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(371): yii\base\View->render('<span class="st...', '[]', Object(app\controllers\AttendanceController))
+#8 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php(64): yii\base\Controller->render('<span class="st...')
+#9 [internal function]: app\controllers\AttendanceController->actionReport()
+#10 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#11 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#12 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#13 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#14 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php(12): yii\base\Application->run()
+#16 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'attend.user' doesn't exist
+)
+
+2016-08-21 13:21:19 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/report'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60292'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/report'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/report'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471774879.527
+    'REQUEST_TIME' => 1471774879
+]
+2016-08-21 13:27:38 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'socket_sendto(): unable to write to socket [101]: Network is unreachable' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/components/connect.php:11
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'socket_sendto()...', '/home/motae/lam...', 11, Array)
+#1 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/components/connect.php(11): socket_sendto(Resource id #4, '\xE8\x03\x17\xFC\x00\x00\x00\x00', 8, 0, '192.168.1.201', 4370)
+#2 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/components/Devices.php(112): connect(Object(app\components\Devices))
+#3 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php(77): app\components\Devices->connection()
+#4 [internal function]: app\controllers\AttendanceController->actionGeneric('1')
+#5 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#7 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('generic', Array)
+#8 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('attendance/gene...', Array)
+#9 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2016-08-21 13:27:38 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/generic'
+    'no' => '1'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60320'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/generic&no=1'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/generic&no=1'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471775258.334
+    'REQUEST_TIME' => 1471775258
+]
+2016-08-21 13:28:12 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function app\controllers\setUsers()' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php:88
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-21 13:28:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/generic'
+    'no' => '1'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60321'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/generic&no=1'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/generic&no=1'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471775292.442
+    'REQUEST_TIME' => 1471775292
+]
+2016-08-21 13:29:25 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: password' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/components/Devices.php:155
+Stack trace:
+#0 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/components/Devices.php(155): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/home/motae/lam...', 155, Array)
+#1 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php(88): app\components\Devices->setUsers('1', '1', 'Abd Elhafiz Moh...')
+#2 [internal function]: app\controllers\AttendanceController->actionGeneric('1')
+#3 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('generic', Array)
+#6 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('attendance/gene...', Array)
+#7 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2016-08-21 13:29:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/generic'
+    'no' => '1'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60344'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/generic&no=1'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/generic&no=1'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471775365.386
+    'REQUEST_TIME' => 1471775365
+]
+2016-08-21 13:34:01 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '/'' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php:79
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-21 13:34:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/generic'
+    'no' => '1'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60345'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/generic&no=1'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/generic&no=1'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471775641.571
+    'REQUEST_TIME' => 1471775641
+]
+2016-08-21 13:39:14 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: value' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php:100
+Stack trace:
+#0 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php(100): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/home/motae/lam...', 100, Array)
+#1 [internal function]: app\controllers\AttendanceController->actionGeneric('1')
+#2 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('generic', Array)
+#5 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('attendance/gene...', Array)
+#6 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2016-08-21 13:39:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/generic'
+    'no' => '1'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60351'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/generic&no=1'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/generic&no=1'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471775953.435
+    'REQUEST_TIME' => 1471775953
+]
+2016-08-21 13:40:03 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: id' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php:100
+Stack trace:
+#0 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php(100): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/home/motae/lam...', 100, Array)
+#1 [internal function]: app\controllers\AttendanceController->actionGeneric('1')
+#2 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('generic', Array)
+#5 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('attendance/gene...', Array)
+#6 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2016-08-21 13:40:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/generic'
+    'no' => '1'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60352'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/generic&no=1'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/generic&no=1'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471776002.722
+    'REQUEST_TIME' => 1471776002
+]
+2016-08-21 13:47:01 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Operator '1' requires two operands.' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/QueryBuilder.php:1279
+Stack trace:
+#0 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/QueryBuilder.php(924): yii\db\QueryBuilder->buildSimpleCondition('1', Array, '<span class="st...')
+#1 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/QueryBuilder.php(743): yii\db\QueryBuilder->buildCondition(Array, '<span class="st...')
+#2 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/QueryBuilder.php(96): yii\db\QueryBuilder->buildWhere(Array, '<span class="st...')
+#3 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Query.php(122): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#4 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Query->createCommand(NULL)
+#5 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php(86): yii\db\Query->all()
+#6 [internal function]: app\controllers\AttendanceController->actionGeneric('1')
+#7 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('generic', Array)
+#10 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('attendance/gene...', Array)
+#11 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2016-08-21 13:47:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/generic'
+    'no' => '1'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60358'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/generic&no=1'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/generic&no=1'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471776421.818
+    'REQUEST_TIME' => 1471776421
+]
+2016-08-21 13:59:30 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: users' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php:99
+Stack trace:
+#0 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php(99): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/home/motae/lam...', 99, Array)
+#1 [internal function]: app\controllers\AttendanceController->actionGeneric('1')
+#2 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('generic', Array)
+#5 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('attendance/gene...', Array)
+#6 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2016-08-21 13:59:30 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/generic'
+    'no' => '1'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => '57lbelu45pnjus8f56pfm1fr63'
+    '_csrf' => '5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=57lbelu45pnjus8f56pfm1fr63; _csrf=5234898df1440f2e6f20399aa587eca65b63f15a2584eb591959ee72b5ad2494a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YYjqM0ew3ecFwB5haxWKsMt-B7e5rjZV%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/web/index.php'
+    'REMOTE_PORT' => '60371'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/generic&no=1'
+    'REQUEST_URI' => '/attend/web/index.php?r=attendance/generic&no=1'
+    'SCRIPT_NAME' => '/attend/web/index.php'
+    'PHP_SELF' => '/attend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1471777170.622
+    'REQUEST_TIME' => 1471777170
+]
+2016-08-22 06:31:29 [127.0.0.1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`attend`.`attendance`, CONSTRAINT `attendance_ibfk_2` FOREIGN KEY (`sub_id`) REFERENCES `subjects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Command.php:781
+Stack trace:
+#0 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Command.php(781): PDOStatement->execute()
+#1 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Schema.php(448): yii\db\Command->execute()
+#2 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php(201): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\controllers\AttendanceController->actionCreate()
+#7 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`attend`.`attendance`, CONSTRAINT `attendance_ibfk_2` FOREIGN KEY (`sub_id`) REFERENCES `subjects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+The SQL being executed was: INSERT INTO `attendance` (`sub_id`, `stu_id`, `status`) VALUES (12, 12, 1)' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `at...')
+#1 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/Schema.php(448): yii\db\Command->execute()
+#2 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/db/BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/controllers/AttendanceController.php(201): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\controllers\AttendanceController->actionCreate()
+#7 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1452
+    [2] => Cannot add or update a child row: a foreign key constraint fails (`attend`.`attendance`, CONSTRAINT `attendance_ibfk_2` FOREIGN KEY (`sub_id`) REFERENCES `subjects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+)
+
+2016-08-22 06:31:29 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/create'
+]
+
+$_POST = [
+    '_csrf' => 'VC5RM3oySGMiYR4EGEAQWyAfGQMLeDArFW8BYhYDeigTfCRdMFYeJg=='
+    'Attendance' => [
+        'sub_id' => '12'
+        'stu_id' => '12'
+        'status' => '1'
+    ]
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => 's7ngeupu5uadjgk4rpis4giab2'
+    '_csrf' => '6bd013ab086dc021dc70a20bc2e7e99968f566de6768c0630bc03d9fed737ecfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"vOO7brX8t1H0qJxHAAPQl12KGRunJdVE\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/attend/index.php?r=attendance%2Fcreate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=s7ngeupu5uadjgk4rpis4giab2; _csrf=6bd013ab086dc021dc70a20bc2e7e99968f566de6768c0630bc03d9fed737ecfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22vOO7brX8t1H0qJxHAAPQl12KGRunJdVE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '143'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/index.php'
+    'REMOTE_PORT' => '59305'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=attendance%2Fcreate'
+    'REQUEST_URI' => '/attend/index.php?r=attendance%2Fcreate'
+    'SCRIPT_NAME' => '/attend/index.php'
+    'PHP_SELF' => '/attend/index.php'
+    'REQUEST_TIME_FLOAT' => 1471836689.661
+    'REQUEST_TIME' => 1471836689
+]
+2016-08-22 06:56:31 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\assets\AppAsset' not found' in /home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/views/layouts/main.php:22
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-22 06:56:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'attendance/report'
+]
+
+$_COOKIE = [
+    'session_id' => 'd81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725'
+    'PHPSESSID' => 's7ngeupu5uadjgk4rpis4giab2'
+    '_csrf' => '6bd013ab086dc021dc70a20bc2e7e99968f566de6768c0630bc03d9fed737ecfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"vOO7brX8t1H0qJxHAAPQl12KGRunJdVE\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'session_id=d81f0f1fe659ba2ac710bc8d1ac1bb9f29e74725; PHPSESSID=s7ngeupu5uadjgk4rpis4giab2; _csrf=6bd013ab086dc021dc70a20bc2e7e99968f566de6768c0630bc03d9fed737ecfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22vOO7brX8t1H0qJxHAAPQl12KGRunJdVE%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => '/home/motae/lampstack-5.4.39-0/frameworks/laravel/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/cakephp/app/Console:/home/motae/lampstack-5.4.39-0/frameworks/codeigniter/bin:/home/motae/lampstack-5.4.39-0/frameworks/symfony/bin:/home/motae/lampstack-5.4.39-0/frameworks/zendframework/app/Console:/home/motae/lampstack-5.4.39-0/heroku/bin:/home/motae/lampstack-5.4.39-0/ruby/bin:/home/motae/lampstack-5.4.39-0/git/bin:/home/motae/lampstack-5.4.39-0/varnish/bin:/home/motae/lampstack-5.4.39-0/sqlite/bin:/home/motae/lampstack-5.4.39-0/php/bin:/home/motae/lampstack-5.4.39-0/mysql/bin:/home/motae/lampstack-5.4.39-0/apache2/bin:/home/motae/lampstack-5.4.39-0/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'LD_LIBRARY_PATH' => '/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:/home/motae/lampstack-5.4.39-0/ruby/lib:/home/motae/lampstack-5.4.39-0/git/lib:/home/motae/lampstack-5.4.39-0/varnish/lib:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish:/home/motae/lampstack-5.4.39-0/varnish/lib/varnish/vmods:/home/motae/lampstack-5.4.39-0/sqlite/lib:/home/motae/lampstack-5.4.39-0/mysql/lib:/home/motae/lampstack-5.4.39-0/apache2/lib:/home/motae/lampstack-5.4.39-0/common/lib:'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/motae/lampstack-5.4.39-0/apache2/htdocs/attend/index.php'
+    'REMOTE_PORT' => '59448'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=attendance/report'
+    'REQUEST_URI' => '/attend/index.php?r=attendance/report'
+    'SCRIPT_NAME' => '/attend/index.php'
+    'PHP_SELF' => '/attend/index.php'
+    'REQUEST_TIME_FLOAT' => 1471838190.812
+    'REQUEST_TIME' => 1471838190
+]
