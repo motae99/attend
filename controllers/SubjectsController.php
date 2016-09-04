@@ -87,7 +87,12 @@ class SubjectsController extends Controller
             $sem = Semester::find()->where(['id' => $sem_id])->one();
             $starting_date = $sem->start_date;
             $ending_date = $sem->end_date;
-            $noOfLec = $_POST['Subjects']['no_of_lect'];
+            $no = $_POST['Subjects']['no_of_lect'];
+            if($no){
+                $noOfLec = $no;
+            }else{
+                $noOfLec = 500;
+            }
             $days = array();
             $time = array();
             $model->save(false);
@@ -165,8 +170,17 @@ class SubjectsController extends Controller
                  }
 
                 $current = strtotime('+1 day', $current);
+                $lec_count = $i-1;
             }
             // var_dump($dates);
+            // $sub = find()->where(['id' => $model->id])->one();
+            $model->no_of_lect = $lec_count;
+            $model->save(false);
+            $semester = $model->sem ;
+            $cur = $semester->no_of_subjects;
+            $semester->no_of_subjects = $cur+1 ;
+            $semester->save(false);
+            
             foreach ($dates as $date => $v) {
                 $cal = new Calender();
                 $cal->sub_id = $v['sub_id'];
@@ -176,7 +190,7 @@ class SubjectsController extends Controller
                 $cal->end_time = $v['end_time'];
                 $cal->save(false);
             }
-             return $this->redirect(['view', 'id' => $model->id]);
+             return $this->redirect(['semester/view', 'id' => $model->sem_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,

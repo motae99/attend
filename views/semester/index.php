@@ -148,7 +148,10 @@ $gridColumns = [
           $subjects = $model->subjects ;
           $total = 0;
           foreach ($subjects as $key => $value) { // Add less than Current Date , 'date' < date('Y-m-d')
-            $count = Calender::find()->where(['sub_id' => $value['id']])->count();
+            $count = Calender::find()
+            ->where(['sub_id' => $value['id']])
+            ->andWhere(['status' => 'done'])
+            ->count();
             $total =+ $count;
           }
           return $total;

@@ -54,11 +54,14 @@ class SemesterController extends Controller
     public function actionView($id)
     {   
         $model = $this->findModel($id);
+        $subjects = Subjects::find()->where(['sem_id'=> $model->id])->all();
         
         return $this->render('view', [
             'model' => $model,
+            'subjects' => $subjects,
         ]);
     }
+
 
     public function actionTable($start=NULL,$end=NULL,$_=NULL, $id){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;

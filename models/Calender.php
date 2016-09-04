@@ -74,4 +74,14 @@ class Calender extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Subjects::className(), ['id' => 'sub_id']);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     * Attendance for specific student
+     */
+    public function getStu()
+    {   
+        // $s_id = 229;
+        return $this->hasMany(Attendance::className(), ['time_table_id' => 'id', 'stu_id' => $s_id]);
+    }
 }

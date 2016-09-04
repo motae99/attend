@@ -16,15 +16,17 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
          
-  <?= Html::button('', ['value' => Url::to(['subjects/add', 'sem_id' => $model->id]), 'title' => 'Add a Subject', 'class' => 'showModalButton btn btn-default fa fa-plus'])?>
-  <?php Pjax::begin(['id'=>'timeTable']); ?>
-
+  
+<div class="row">
+<?php Pjax::begin(['id'=>'timeTable']); ?>
+    <div class="col-sm-10">
        <?= \yii2fullcalendar\yii2fullcalendar::widget([
         'options' => ['language' => 'en-us'],
         
         'clientOptions' => [
-            'minTime'=> "00:00:00",
-            'maxTime'=> "23:59:59",
+            'minTime'=> "08:00:00",
+            'maxTime'=> "18:59:59",
+            'default' => 'agendaWeek',
             'fixedWeekCount' => false,
             'weekNumbers'=>true,
             'editable' => true,
@@ -44,5 +46,32 @@ $this->params['breadcrumbs'][] = $this->title;
             'timeFormat' => 'hh(:mm) A'
         ],
         'ajaxEvents' => Url::toRoute(['table', 'id' =>$model->id])
-      ]); ?>
-  <?php Pjax::end();  ?>
+      ]); ?> 
+    </div>
+<?php Pjax::end();  ?>
+    <div class="col-sm-2">
+        <?php echo Html::button(' Add subject', ['value' => Url::to(['subjects/add', 'sem_id' => $model->id]), 'title' => 'Add a Subject', 'class' => 'showModalButton btn btn-success btn-block fa fa-plus'])?>
+        <?php //echo Html::button('', ['value' => Url::to(['subjects/create']), 'title' => 'Add a Subject', 'class' => 'btn btn-info fa fa-plus'])?>
+        <?php
+            foreach ($subjects as $subject ) {
+                $class = "btn btn-block ".$subject->color_class;
+                $name = $subject->sub_name;
+                $no = $subject->no_of_lect;
+                
+            ?>
+            <button class="<?= $class?>" style=" color: #fff; text-align: left;">
+                <span class="pull-right badge bg-green"><?= $no;?></span>
+                <?= $name;?>
+            </button>
+            <?php    
+            } 
+            
+            
+        ?>
+    
+
+        
+    </div>
+</div>
+
+       

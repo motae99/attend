@@ -34,7 +34,7 @@ class Semester extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['course_id', 'sem_name', 'no_of_subjects', 'start_date', 'end_date'], 'required'],
+            [['course_id', 'sem_name', 'start_date', 'end_date'], 'required'],
             [['course_id', 'no_of_subjects'], 'integer'],
             [['start_date', 'end_date'], 'safe'],
             [['sem_name'], 'string', 'max' => 45]

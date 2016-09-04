@@ -26,6 +26,7 @@ $students = Student::find()->where(['sem_id'=> 3])->all();
 ?>
 <div class="table-responsive">
 <table class="table invoice-items">
+    <thead>
 	    <tr class="h4 text-dark">
 	    	<th>
 				Students
@@ -36,11 +37,7 @@ $students = Student::find()->where(['sem_id'=> 3])->all();
 			<td>
     			<?=$s['id']?>
     		</td>
-    		<?php
-    			}
-    		?>
-    	</tr>
-<?php
+<?php}
 $dates = Calender::find()->where(['sub_id'=> $subject_id])->all();
 foreach ($dates as $date => $value) {
 	$att = Attendance::find()->where(['sub_id'=> $subject_id, 'time_table_id' => $value['id']])->all();
@@ -63,7 +60,19 @@ foreach ($dates as $date => $value) {
 ?>
 
 	    	
-	    
+	    </tr>
+	    	<?php 
+	    		foreach ($students as $ss => $s) {
+	    	?>
+	    <tr>
+			<td>
+    			<?=$s['id']?>
+    		</td>
+    	</tr>
+	    	<?php		
+	    		}
+	    	?>
+    </tbody>
 </table>
 </div>
 

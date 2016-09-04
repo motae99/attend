@@ -61,7 +61,7 @@ class AttendanceController extends Controller
 
     public function actionReport()
     {
-        return $this->render('report');
+        return $this->render('8');
     }
 
     public function actionGeneric($no)
@@ -98,13 +98,12 @@ class AttendanceController extends Controller
 
 
             // $clear = $attend->clearLogs();
-            $devUsers = $attend->allUsers();
-            // // var_dump($users);
+            // $devUsers = $attend->allUsers();
+            // var_dump($devUsers);
             // // $clearUsers = $attend->clearUsers();
-            foreach ($devUsers as $key => $v) {
-                echo $v[0]. " ".$v[1]." ".$v[2]." ".$v[3]."<br>";
-            }
-
+            // foreach ($devUsers as $key => $v) {
+            //     echo $v[0]. " ".$v[1]." ".$v[2]." ".$v[3]."<br>";
+            // }
             $attend->enable();
             $cutConnection = $attend->disConnection();
         }
@@ -112,58 +111,100 @@ class AttendanceController extends Controller
 
     }
 
-    public function actionSync()
-    {
-        $attend = new Attend();
-        $connection = $attend->connect();
-        if($connection){
-        
-        $dis = $attend->disable();
-        $logs = $attend->getlogs();
-        // var_dump($logs);
+public function actionSync()
+{
+    $attend = new Attend();
+    $connection = $attend->connect();
+    if($connection){
+    
+    $dis = $attend->disable();
+    $logs = $attend->getlogs();
 
+        // unifying $logs of the same id
+        // $id = array();
+        $dup = array();
+        // foreach ($logs as $log) {
+        //     $id[] = $log[1] ;
+        //     if(array_key_exists($log[1], $id)){
+        //        $dup[] = $log[1] ;
+        //     }
+        //     // $dup[] = $du; 
+
+        // }
+        // // $unique_values = array_unique($id);
+        // var_dump($dup);
+
+        // echo "<br> <br>";
+        // var_dump($id);
+        
+        // $dublicat = array();
+        
         sleep(2);
             foreach ($logs as $log => $k) {
                 echo $log." ".$k[1]." ".$k[3]."<br>";
-                // echo $log." ".$k[1]." ".$k[3]."<br>";
+                // echo $log."<br>";
                 // echo "id on device: ".$k[1]."<br>";
                 // echo "timestamp of log: ".$k[3]."<br>";
-                // $student = Student::find()->where(['id' =>$k[1]])->one();
-                // echo "id on sys: ".$student->id."<br>";
-                // echo "sem id : ".$student->sem_id."<br>";
-                // echo "student Name: ".$student->name."<br>";
-                // echo "<br> <br>";
-                // $sem = $student->sem_id;
-                // echo $sem;
-                // $sub = Subjects::find()->where(['sem_id'=>$sem])->all();
-                // var_dump($sub);
-                // foreach ($sub as $s => $v) {
-                //     // echo " Subject id :".$v['id']."<br> ";
-                //     // echo " Semester id  :".$v['sem_id']."<br> ";
-                //     // echo " sub_name :".$v['sub_name']."<br> ";
-                //     // echo " noOfLec :".$v['no_of_lect']."<br> ";
-                //     // echo "<br> " ;
-                //     $cal = Calender::find()->where(['sub_id'=>$v['id']])->all();
-                //     foreach ($cal as $c => $value) {
-                //         $start = $value['date']." ".$value['start_time'];
-                //         $end = $value['date']." ".$value['end_time'];
-                //         // echo $start." to ".$end."<br>";
-                //         // echo $k[3]."<br>"; 
-                //         if($k[3] >= $start && $k[3] <= $end){
-                //             // echo "student attended this: <br> ";
-                //             // echo $start." to ".$end."<br>";
-                //             // echo "timestamp of log: ".$k[3]."<br> <br>";
-                //             $mark = new Attendance();
-                //             $mark->sub_id = $value['sub_id'];
-                //             $mark->stu_id = $student->id;
-                //             $mark->time_table_id = $value['id'];
-                //             $mark->status = 1;
-                //             // $mark->save();
-                            
-                            
-                //         }
-                //     }
-                // }
+                $student = Student::find()->where(['id' =>$k[1]])->one();
+                if(!$student){
+                    // We should raise an exception Error because the device sent id = 0 in this case
+                   // echo $k[1]."<br>"; 
+                }
+                    // echo "id on sys : ".$student->id;
+                    // echo " sem id : ".$student->sem_id;
+                    // echo " student Name: ".$student->name."<br> <br>";
+                   
+                if($student){ 
+                    $sem = $student->sem_id;
+                    // echo $sem;
+                    $sub = Subjects::find()->where(['sem_id'=>$sem])->all();
+                    // var_dump($sub);
+                    foreach ($sub as $s => $v) {
+                        // echo " Subject id :".$v['id']."<br> ";
+                        // echo " Semester id  :".$v['sem_id']."<br> ";
+                        // echo " sub_name :".$v['sub_name']."<br> ";
+                        // echo " noOfLec :".$v['no_of_lect']."<br> ";
+                        // echo "<br> " ;
+                        $cal = Calender::find()->where(['sub_id'=>$v['id']])->all();
+                        foreach ($cal as $c => $value) {
+                            $start = $value['date']." ".$value['start_time'];
+                            $end = $value['date']." ".$value['end_time'];
+                            // echo $start." to ".$end."<br>";
+                            // echo $k[3]."<br>"; 
+                            if($k[3] >= $start && $k[3] <= $end){
+                                // echo "student attended this: <br> ";
+                                // echo $student->name.$student->id."<br> ";
+                                // echo "subject: ".$value['sub_id']."<br> ";
+                                // echo "on Date: ".$value['date']."<br> ";
+                                // echo $start." to ".$end."<br>";
+                                // echo "timestamp of log: ".$k[3]."<br> <br>";
+                                
+                                // modify lecture on that date as Done
+                                // $lecture = Calender::find()->where(['id'=>$value['id']])->one();
+                                // $status = $lecture->status;
+                                // if($status == 'schedualed'){
+                                //   $lecture->status = 'done'; 
+                                //   $lecture->save();
+                                // }
+                                $dublicat = Attendance::find()->where(['sub_id'=> $value['sub_id'], 'stu_id'=> $student->id, 'time_table_id' => $value['id']])->one();
+                               if(!$dublicat){
+                                $mark = new Attendance();
+                                $mark->sub_id = $value['sub_id'];
+                                $mark->stu_id = $student->id;
+                                $mark->time_table_id = $value['id'];
+                                $mark->status = 1;
+                                $mark->save();
+                               }else{
+
+                                $dup[] = $dublicat->stu_id;
+
+                               }
+                                
+                                
+                            }
+                        }
+                    }
+                }
             }
            
 
@@ -176,12 +217,12 @@ class AttendanceController extends Controller
         
             $attend->enable();
             $cutConnection = $attend->disConnection();
-        }
+    }
     
-
+        var_dump($dup);
         // return $this->redirect(['index']);
         
-    }
+}
 
     public function actionClear(){
         $attend = new Attend();

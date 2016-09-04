@@ -32,7 +32,7 @@ class Student extends \yii\db\ActiveRecord
         return [
             [['name', 'sem_id'], 'required'],
             [['sem_id'], 'integer'],
-            [['details'], 'string'],
+            // [['details'], 'string'],
             [['name'], 'string', 'max' => 45],
             [['sem_id'], 'exist', 'skipOnError' => true, 'targetClass' => Semester::className(), 'targetAttribute' => ['sem_id' => 'id']],
         ];
@@ -47,7 +47,7 @@ class Student extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'sem_id' => 'Sem ID',
-            'details' => 'Details',
+            // 'details' => 'Details',
         ];
     }
 

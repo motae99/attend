@@ -160,6 +160,11 @@ class Devices extends Object
     // getuser($this)
     // clearuser($this)
     // clearadmin($this)
+
+    function getSizeOfAtt(){
+        $size = getSizeAttendance($this);
+        return $size ;
+    }
     
 
 }

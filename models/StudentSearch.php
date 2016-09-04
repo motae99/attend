@@ -19,7 +19,7 @@ class StudentSearch extends Student
     {
         return [
             [['id', 'sem_id'], 'integer'],
-            [['name', 'details'], 'safe'],
+            [['name'], 'safe'],
         ];
     }
 
@@ -60,8 +60,8 @@ class StudentSearch extends Student
             'sem_id' => $this->sem_id,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'details', $this->details]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
+            // ->andFilterWhere(['like', 'details', $this->details]);
 
         return $dataProvider;
     }

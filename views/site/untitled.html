@@ -1,0 +1,113 @@
+<?php
+ 
+use yii\helpers\Html;
+use yii\widgets\DetailView;
+use miloschuman\highcharts\Highcharts;
+use dosamigos\chartjs\ChartJs;
+use yii\web\JsExpression;
+
+/* @var $this yii\web\View */
+/* @var $model app\models\Engineers */
+
+$this->title = $model->name;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Engineers'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="row">
+
+    <?php
+        $all_tasks = $model->getEngineertasks()->all();
+        foreach($all_tasks as $k=>$v){
+            $task[] = $v['task'];
+            $task_payments[] = $v->getEngineerstaskpayments()->sum('paid');
+
+        }
+        $all_tasks_payments[0]= $task;
+        $all_tasks_payments[1]= $task_payments;
+    ?>
+
+<?php
+    if(!empty($all_tasks_payments)) {
+        echo ChartJs::widget([
+            'type' => 'Pie',
+             'data' => $all_tasks_payments
+              
+        ]);
+    } else {
+        echo '<div class="alert alert-danger">No results found.</div>';
+    }
+    ?>
+
+</div>
+<div class="engineers-view">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+
+    <p>
+        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                'method' => 'post',
+            ],
+        ]) ?>
+    </p>
+
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'id',
+            'phone_no',
+            'name',
+            'created_at',
+        ],
+    ]) ?>
+
+</div>
+<div>
+    Create a Dependent dropdown list to choose 
+    1. Task 
+    2. 
+</div>
+ 
+<div>
+ <?php 
+
+
+    $all_tasks = $model->getEngineertasks()->all();
+    if($all_tasks){
+        foreach($all_tasks as $k=>$v){
+            echo  $v['id']."    -------------------              "; 
+            echo  $v['task']."    -------------------              ";
+            echo $v['cost']."       ----------------            ";
+            echo $v['desc']."         -------------      ";
+            echo $v['created_at']."       -----------------          ";
+            $customer = $v->getCustomer()->one();
+            echo $customer->full_name."     ----------------          ";
+            echo $customer->car_type;
+            echo "<br>" ;
+            $task_payments = $v->getEngineerstaskpayments()->all();
+            $total_paid = $v->getEngineerstaskpayments()->sum('paid');
+            if($task_payments){
+                foreach($task_payments as $t=>$p){
+                    echo  "paid: ".$p['paid']."------------====================-------";
+                    echo "At this time: ".$p['created_at']."<br>"; 
+                    echo "total paid: ".$total_paid;
+
+               
+                }
+                echo "<br>" ;
+                echo "<br>" ;
+                echo "<br>" ;
+            }else{
+                echo "No payment has been resieved for this Task ";
+                echo "<br>" ;
+                echo "<br>" ;
+                echo "<br>" ;
+            }
+
+        }
+    }
+ ?>
+</div>

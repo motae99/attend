@@ -1,4 +1,4 @@
-<?php
+<?php 
     function getSizeAttendance($self) {
         /*Checks a returned packet to see if it returned CMD_PREPARE_DATA,
         indicating that data packets are to be sent

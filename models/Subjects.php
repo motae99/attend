@@ -47,7 +47,7 @@ class Subjects extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['sem_id', 'sub_name', 'no_of_lect', 'color_class'], 'required'],
+            [['sem_id', 'sub_name', 'color_class'], 'required'],
             [['sem_id', 'no_of_lect'], 'integer'],
             [['sub_name'], 'string', 'max' => 45]
         ];

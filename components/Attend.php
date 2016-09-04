@@ -170,7 +170,7 @@ class attend
         
         socket_sendto($this->device, $buf, strlen($buf), 0, $this->ip, $this->port);
         
-        //try {
+        try {
         socket_recvfrom($this->device, $this->data_recv, 1024, 0, $this->ip, $this->port);
         
         if ( getSizeAttendance($this) ) {
@@ -200,12 +200,12 @@ class attend
                 
                 $u = unpack( 'H78', substr( $attendancedata, 0, 39 ) );
                 //24s1s4s11s
-                //print_r($u);
+                print_r($u);
 
                 $uid = hexdec( substr( $u[1], 0, 6 ) );
                 $uid = explode(chr(0), $uid);
                 $uid = intval( $uid[0] ); 
-                $id = intval( str_replace("\0", '', hex2bin( substr($u[1], 6, 8) ) ) );
+                $id = str_replace("\0", '', hex2bin( substr($u[1], 6, 8) ) ) ;
                 $state = hexdec( substr( $u[1], 56, 2 ) );
                 $timestamp = decode_time( hexdec( $this->reverseHex( substr($u[1], 58, 8) ) ) ); 
                 
@@ -215,19 +215,16 @@ class attend
                 #print "%s, %s, %s" % (uid, state, decode_time( int( reverseHex( timestamp.encode('hex') ), 16 ) ) )
                 
                   array_push( $attendance, array( $uid, $id, $state, $timestamp ) );
-                // $attendance[]['uid'] = $uid;
-                // $attendance[]['id'] = $id;
-                // $attendance[]['state'] = $state;
-                // $attendance[]['timestamp'] = $timestamp;
+                
                 $attendancedata = substr( $attendancedata, 40 );
             }
             
         }
             
         return $attendance;
-        //} catch(exception $e) {
-            //return False;
-        //}
+        } catch(exception $e) {
+            return False;
+        }
     }
 
     function clearLogs(){
